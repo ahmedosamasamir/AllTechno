@@ -1,0 +1,271 @@
+/* Home.css */
+:root {
+  --primary-color: #00A550;
+  --secondary-color: #000000;
+  --background-color: rgba(244, 244, 244, 0.5);
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --accent-color: #ff5722;
+  --transition-speed: 0.3s;
+}
+
+/* Base Styles */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 250vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Overlay Content */
+.overlay {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-light);
+  width: 80%;
+  max-width: 800px;
+  z-index: 1;
+  background-color: var(--background-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.8s ease-out 0.5s both;
+}
+
+.main-heading {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-out 1s both;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out 1.2s both;
+}
+
+.shop-now-button {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out 1.4s both;
+}
+
+.shop-now-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Overlay */
+.container2{
+  background-color: var(--background-color);
+  width: 100%;
+  height: 8%;
+  margin-top: 46.562%;
+}
+.overlay1 {
+  position: absolute;
+  left: 30px;
+  z-index: 1;
+  animation: fadeIn 1s ease-out 2s both;
+  margin-top: 10px;
+}
+ 
+
+.link1 img {
+  height: 70px;
+  width: auto;
+  border-radius: 50px;
+  transition: all var(--transition-speed) ease;
+  border: 2px solid var(--primary-color);
+  padding: 5px;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: spin-border 3s linear infinite;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+@keyframes spin-border {
+  0% {
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+}
+
+.link1 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* about section */
+.about-img {
+  position: relative;
+  top: 100%;
+  margin-top: 100px;
+  animation: fadeIn 1s ease-out 2s both;
+ }
+
+.about-img img {
+   height: auto;
+   margin-right: 50%;
+   border-radius: 50%;
+   margin-left: 60px;
+ }
+
+.about-overlay {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.about-overlay h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 70%;
+  color: var(--secondary-color);
+  margin-top: 200px;
+}
+
+.about-overlay button {
+  padding: 12px 30px;
+  font-size: 24px;
+  color: #080e33;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 70%;
+  width: 300px;
+}
+
+.about-overlay button:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .main-heading {
+    font-size: 2.8rem;
+  }
+  
+  .sub-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+  
+  .sub-heading {
+    font-size: 1.1rem;
+  }
+  
+  .overlay {
+    padding: 1.8rem;
+    width: 90%;
+  }
+  
+  .shop-now-button {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+  
+  .link1 img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  
+  .sub-heading {
+    font-size: 1rem;
+  }
+  
+  .overlay {
+    padding: 1.5rem;
+  }
+  
+  .overlay1 {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .link1 img {
+    height: 50px;
+  }
+}

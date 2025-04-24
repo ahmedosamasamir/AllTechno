@@ -1,0 +1,101 @@
+.cart{
+     margin-top: 100px;
+     margin: 30px;
+     margin-top: 100px;
+}
+.total-price{
+    text-align: center;
+    color: #00A550;
+}
+
+.main-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 94%;
+    
+}
+.main-cart img{
+    width: 300px;
+    max-height: 20vh;
+}
+.cart-item img {
+    width: 100%; /* ✅ اجعل الصورة تمتد بعرض الفريم بالكامل */
+    height: 180px; /* ✅ تحديد ارتفاع ثابت */
+    object-fit: cover; /* ✅ ضبط الصورة لتملأ الإطار بدون تشويه */
+    border-radius: 8px; /* ✅ إضافة زوايا مستديرة للصورة */
+}
+
+
+.cart-item{
+    width: 22%;
+    margin-bottom: 20px;
+    padding: 15px; /* إضافة مسافة داخلية */
+    border: 2px solid #00A550; /* ✅ إضافة إطار أخضر */
+    border-radius: 10px; /* ✅ زوايا دائرية */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* ✅ ظل خفيف */
+    text-align: center; /* ✅ محاذاة النص */
+    background-color: #fff; /* ✅ خلفية بيضاء */
+}
+
+.quantity-controls {
+  text-align: center;
+}
+
+.quantity-controls span{
+    padding: 0px 35px;
+    color: #00A550;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quantity-controls .bt1 {
+    padding: 5px 20px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.quantity-controls .bt1:hover{
+    background-color: #a11212;
+}
+
+.quantity-controls .bt2 {
+    padding: 5px 20px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.quantity-controls .bt2:hover{
+    background-color: #00A550;
+}
+.cart-price{
+    font-weight: 600;
+}
+
+.remove-btn{
+    padding: 5px 15px;
+    background-color: #050101;
+    color: white;
+    font-size: 25px;
+    margin-top: 12px;
+    border: 0px;
+    border-radius: 70px;
+    width: 90%;
+    cursor: pointer;
+    
+
+}
+.remove-btn:hover {
+    color: #000;
+    background-color: #cf1f1f;
+}

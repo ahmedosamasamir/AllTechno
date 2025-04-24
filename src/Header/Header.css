@@ -1,0 +1,215 @@
+/* Header.css */
+
+/* Primary color from the logo */
+:root {
+  --primary-color: #00A550;  /* Light blue similar to the logo color */
+  --secondary-color: #000000; /* Black */
+  --background-color: rgba(244, 244, 244, 0.5); /* Light transparent gray */
+}
+
+
+.header {
+  position: fixed;  /* Keep the header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  border-bottom: 3px solid var(--primary-color);
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  z-index: 1000; /* Keep it above all elements */
+  transition: transform 0.1s ease-in-out; /* تأثير الظهور والإخفاء */
+}
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+/* Left Section - Logo */
+.logo img {
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  animation: spin-border 3s linear infinite;
+}
+
+@keyframes spin-border {
+  0% {
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+}
+
+/* Center Section - Navigation Links */
+.center-section {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  width: 300px;
+ }
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  flex-grow: 1;
+  color: var(--secondary-color);
+}
+
+.search-icon {
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+/* Search Results */
+.search-results {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.search-result-item {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: background 0.3s ease;
+}
+
+.search-result-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Right Section - Login, Wishlist, Cart */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+  font-size: 20px;
+}
+
+.user-icon {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+/* Cart */
+.cart-icon-container {
+  position: relative;
+  margin-right: 90px;
+}
+
+.cart-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.cart-count {
+  background: var(--primary-color);
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 7px;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+}
+
+/* Dropdown Menu */
+.menu-container {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--secondary-color);
+  margin-left: 40px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

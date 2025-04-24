@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #00A550;  /* Green Accent */
+  --secondary-color: #000000; /* Black */
+  --background-color: rgba(244, 244, 244, 0.5); /* Light Transparent Gray */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* الحاوية الرئيسية */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--glass-bg);
+  margin: 30px;
+}
+
+/* نموذج التسجيل */
+.register-form {
+  background: var(--glass-border);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--primary-color);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* عنوان التسجيل */
+.register-form h2 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+
+/* حقول الإدخال */
+.input-field input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #db4437;
+ }
+
+/* تأثير عند التركيز */
+.input-field input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* تغيير لون الظل عند إدخال النص */
+.input-field input:valid {
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* زر التسجيل */
+.register-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.register-btn:hover {
+  background-color: #008a45;
+}
+
+/* رابط تسجيل الدخول */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

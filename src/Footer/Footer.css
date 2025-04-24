@@ -1,0 +1,165 @@
+.footer {
+  background-color: var(--primary-color); /* Primary color (Green) */
+  color: var(--secondary-color); /* Black */
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+.footer-section p {
+  color: var(--secondary-color);
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff; /* White */
+}
+
+.footer-section a {
+  display: block;
+  color: #ffffff; /* White */
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: var(--background-color); /* Light Gray */
+}
+
+.footer-section .social-icons a {
+  margin-right: 10px;
+  color: #ffffff; /* White */
+}
+
+.social-icons a img:hover {
+  flex-direction: row;
+  color: var(--secondary-color);
+}
+
+.footer-section .social-icons a:hover {
+  color: var(--background-color); /* Light Gray */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid var(--background-color);
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  color: #ffffff;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: var(--background-color);
+}
+
+/* Subscribe Form */
+.footer-section form input[type="email"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  border: 5px solid var(--background-color);
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: white;
+  width: 300px;
+  height: 24px;
+  font-size: 18px;
+}
+
+.footer-section form button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color); /* Black */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px 30px 50px 10px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 50%;
+  margin-top: 10px;
+}
+
+.footer-section form button:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--background-color);
+}
+
+/* Social Media Colors */
+.fa-linkedin {
+  background-color: #0a66c2;
+}
+
+.fa-linkedin:hover {
+  background-color: var(--background-color);
+}
+
+.fa-instagram {
+  background-color: #e4405f;
+}
+
+.fa-instagram:hover {
+  background-color: var(--background-color);
+}
+
+.fa-facebook {
+  background-color: #1877f2;
+}
+
+.fa-facebook:hover {
+  background-color: var(--background-color);
+}
+
+.fa-tiktok {
+  background-color: #000000;
+}
+
+.fa-tiktok:hover {
+  background-color: var(--background-color);
+}
+
+.footer-section .subscribe {
+  margin-right: 100px;
+}
