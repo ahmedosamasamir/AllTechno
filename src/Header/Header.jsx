@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import PRODUCTS from "../data"; // Import product list from static data or API
+import PRODUCTS from "../data";
 import logo from "../components/imgs/All1.jpg";
 import { useSelector } from 'react-redux';
 
 export function Header() {
-  const cartItems = useSelector((state) => state?.cartItems || []); 
+  const cartItems = useSelector((state) => state?.cartItems || []);
   const cartCount = cartItems.reduce((total, item) => total + (item.quantity || 0), 0);
+
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isHidden, setIsHidden] = useState(false);
-  
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // 👈 للتحكم بظهور خانة البحث في الموبايل
+
   const lastScrollY = useRef(window.scrollY);
 
   const toggleMenu = () => {
@@ -24,12 +26,15 @@ export function Header() {
   const handleSearch = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
-    
-    const results = PRODUCTS.filter(product =>
-      product.name.toLowerCase().includes(value.toLowerCase())
-    );
-    
-    setSearchResults(results);
+
+    if (value.trim() === '') {
+      setSearchResults([]);
+    } else {
+      const results = PRODUCTS.filter(product =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setSearchResults(results);
+    }
   };
 
   useEffect(() => {
@@ -58,29 +63,49 @@ export function Header() {
           </div>
         )}
       </div>
-      
-      <div className="search-bar">
-        <FontAwesomeIcon icon={faSearch} className="search-icon" />
+
+      <div className={`search-bar ${isSearchOpen ? 'open' : ''}`}>
+        <FontAwesomeIcon 
+          icon={faSearch} 
+          className="search-icon" 
+          onClick={() => setIsSearchOpen(!isSearchOpen)} // 👈 يفتح ويغلق البحث
+        />
         <input
           type="text"
           placeholder="Search"
           className="search-input"
           value={searchTerm}
           onChange={handleSearch}
+          onFocus={() => {
+            if (searchTerm.trim() !== '') {
+              const results = PRODUCTS.filter(product =>
+                product.name.toLowerCase().includes(searchTerm.toLowerCase())
+              );
+              setSearchResults(results);
+            }
+          }}
+          onBlur={() => setTimeout(() => setSearchResults([]), 200)}
         />
-        {searchTerm && searchResults.length > 0 && (
+        
+        {searchTerm && (
           <div className="search-results">
-            {searchResults.map((product) => (
-              <Link key={product.id} to={`/details/${product.id}`} className="search-result-item">
-                {product.name}
-              </Link>
-            ))}
+            {searchResults.length > 0 ? (
+              searchResults.map((product) => (
+                <Link key={product.id} to={`/details/${product.id}`} className="search-result-item">
+                  {product.name}
+                </Link>
+              ))
+            ) : (
+              <div className="no-results">No results found</div>
+            )}
           </div>
         )}
       </div>
 
       <div className="center-section">
-        <Link className="logo" to={'/'}><img src={logo} alt="Logo" /></Link>
+        <Link className="logo" to={'/'}>
+          <img src={logo} alt="Logo" />
+        </Link>
         <nav className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/accessories" className="nav-link">Accessories</Link>

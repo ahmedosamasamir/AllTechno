@@ -11,6 +11,7 @@ import {ProductCard} from "../src/pages/productCard";
 import Cart from './pages/cart';
 import Register from './pages/Register';
 import AboutUs from './pages/about';
+ 
 
 
 function App() {
