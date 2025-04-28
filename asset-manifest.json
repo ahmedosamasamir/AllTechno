@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AllTechno/static/css/main.8ba3f18e.css",
-    "main.js": "/AllTechno/static/js/main.284684dd.js",
+    "main.css": "/AllTechno/static/css/main.c3fd92f5.css",
+    "main.js": "/AllTechno/static/js/main.6dd4b488.js",
     "static/js/453.4ee3bb1e.chunk.js": "/AllTechno/static/js/453.4ee3bb1e.chunk.js",
     "static/media/background1.mp4": "/AllTechno/static/media/background1.e157ad16acbfff0d5ac1.mp4",
     "static/media/accessores.png": "/AllTechno/static/media/accessores.d571c982f5a7fdf5011f.png",
@@ -36,12 +36,12 @@
     "static/media/33.jpg": "/AllTechno/static/media/33.886fea41e62a5416d98e.jpg",
     "static/media/35.jpg": "/AllTechno/static/media/35.058ae0e25d4397c64119.jpg",
     "index.html": "/AllTechno/index.html",
-    "main.8ba3f18e.css.map": "/AllTechno/static/css/main.8ba3f18e.css.map",
-    "main.284684dd.js.map": "/AllTechno/static/js/main.284684dd.js.map",
+    "main.c3fd92f5.css.map": "/AllTechno/static/css/main.c3fd92f5.css.map",
+    "main.6dd4b488.js.map": "/AllTechno/static/js/main.6dd4b488.js.map",
     "453.4ee3bb1e.chunk.js.map": "/AllTechno/static/js/453.4ee3bb1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ba3f18e.css",
-    "static/js/main.284684dd.js"
+    "static/css/main.c3fd92f5.css",
+    "static/js/main.6dd4b488.js"
   ]
 }
