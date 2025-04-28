@@ -8,7 +8,10 @@
   h1 {
     font-size: 2rem;
     margin: 1rem 0;
-    margin-top: 30px;
+    margin-top: 50px;
+  }
+ .laptop h2{
+    margin-top: 130px;
   }
   
   p {

@@ -15,7 +15,7 @@ export const Laptop =() => {
 
     return (
         <div className="laptop">
-        <h1>Laptop</h1>
+        <h2>Laptop</h2>
         <div className="product-grid">
           {PRODUCTS.map((product, index) => (
             <div className="product-card" key={index}>

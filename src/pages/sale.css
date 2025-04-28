@@ -2,8 +2,10 @@
     text-align: center;
     padding: 20px;
     margin: 50px;
-
   }
+.product-list h2{
+  margin-top: 50px;
+}
   
   .products {
     display: flex;

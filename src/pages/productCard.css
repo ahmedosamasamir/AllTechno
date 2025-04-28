@@ -34,19 +34,19 @@
 
 /* عنوان المنتج */
 h2 {
-  font-size: 32px;
+  font-size: 24px; /* تم تصغير حجم الخط */
   font-weight: bold;
   margin-bottom: 15px;
- }
+}
 
 .price {
-  font-size: 22px;
+  font-size: 18px; /* تم تصغير حجم الخط */
   color: #000;
   margin-bottom: 15px;
 }
 
 .details {
-  font-size: 16px;
+  font-size: 14px; /* تم تصغير حجم الخط */
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -57,7 +57,7 @@ h2 {
 }
 
 .color-options p {
-  font-size: 16px;
+  font-size: 14px; /* تم تصغير حجم الخط */
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -68,8 +68,8 @@ h2 {
 }
 
 .color-swatch {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px; /* تم تصغير الحجم */
   border-radius: 50%;
   border: 2px solid #ddd;
   cursor: pointer;
@@ -82,31 +82,32 @@ h2 {
 
 .quantity-section label {
   display: block;
-  font-size: 16px;
+  font-size: 14px; /* تم تصغير حجم الخط */
   margin-bottom: 5px;
 }
 
 .quantity-input {
-  width: 60px;
+  width: 50px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 14px; /* تم تصغير حجم الخط */
 }
+
 /* تصميم زر Add to Cart */
 .btn {
   background-color: transparent;
   color: #000;
-  padding: 10px 20px;
+  padding: 8px 16px; /* تم تقليل الحشو */
   border: 2px solid #000;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 14px; /* تم تصغير حجم الخط */
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
   margin-left: 10px;
-  width: 300px;
+  width: 260px; /* تم تقليل العرض */
 }
 
 .btn:hover {
@@ -114,3 +115,188 @@ h2 {
   color: #000000;
 }
 
+/* استعلامات الوسائط لأحجام الشاشات المختلفة */
+
+/* للشاشة بحجم 320px */
+@media (max-width: 320px) {
+  .product-card-main {
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 10px; /* تم تصغير الخط */
+  }
+
+  .price {
+    font-size: 10px; /* تم تصغير الخط */
+  }
+
+  .details {
+    font-size: 10px; /* تم تصغير الخط */
+  }
+
+  .product-image {
+    width: 30vh; /* تصغير حجم الصورة */
+  }
+
+  .quantity-input {
+    width: 45px; /* تصغير المدخل */
+    font-size: 12px;
+  }
+
+  .btn {
+    width: 180px; /* تصغير عرض الزر */
+    font-size: 12px; /* تصغير حجم النص */
+    padding: 7px 12px;
+  }
+}
+
+/* للشاشة بحجم 375px */
+@media (max-width: 375px) {
+  .product-card-main {
+    padding: 15px;
+    margin-top: 60px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .details {
+    font-size: 13px;
+  }
+
+  .product-image {
+    width: 55vh;
+  }
+
+  .quantity-input {
+    width: 50px;
+  }
+
+  .btn {
+    width: 220px;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+/* للشاشة بحجم 425px */
+@media (max-width: 425px) {
+  .product-card-main {
+    padding: 15px;
+    margin-top: 70px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .details {
+    font-size: 14px;
+  }
+
+  .product-image {
+    width: 60vh;
+  }
+
+  .quantity-input {
+    width: 55px;
+  }
+
+  .btn {
+    width: 240px;
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+}
+
+/* للشاشة بحجم 768px (الشاشات اللوحية) */
+@media (max-width: 768px) {
+  .product-card-main {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .details {
+    font-size: 14px;
+  }
+
+  .product-image {
+    width: 70vh;
+  }
+
+  .quantity-input {
+    width: 60px;
+  }
+
+  .btn {
+    width: 280px;
+    font-size: 14px;
+    padding: 9px 18px;
+  }
+}
+
+/* للشاشة بحجم 1200px (الشاشات الكبيرة) */
+@media (max-width: 1200px) {
+  .product-card-main {
+    padding: 30px;
+    margin-top: 80px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .details {
+    font-size: 14px;
+  }
+
+  .product-image {
+    width: 80vh;
+  }
+
+  .quantity-input {
+    width: 70px;
+  }
+
+  .btn {
+    width: 300px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* الشاشات الصغيرة: نعيد ترتيب العناصر بحيث تظهر الصورة تحت الديتيلز */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* تغيير الاتجاه ليصبح عموديا */
+    align-items: flex-start;
+  }
+
+  .product-image {
+    width: 100%; /* تأكد أن الصورة تملأ المساحة */
+    margin-top: 20px; /* إضافة مسافة بين النص والصورة */
+  }
+}

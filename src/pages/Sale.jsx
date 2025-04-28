@@ -12,7 +12,7 @@ export const Sale =()=> {
 
   return (
     <div className="product-list">
-      <h1>Sale</h1>
+      <h2>Sale</h2>
        <div className="products">
         {saleProducts.map((product, index) => (
           <div className="product-card" key={index}>
